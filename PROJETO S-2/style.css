@@ -1,0 +1,303 @@
+@charset "UTF-08";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: darkgrey;
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    list-style-position: inside;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 25px;
+    
+}
+nav li a{
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-variant: small-caps;
+}
+nav a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+main{
+    background-color: white;
+    
+}
+#container-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+#container-flex  .item{
+    width: 250px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    
+
+}
+#container-flex  .item:hover{
+    width: 250px;
+    height: 100px;
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transform: translateY(10px);
+
+}
+#container-grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: space-between;
+    
+
+}
+.carta-1{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url(img/cat-2083492_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-2{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/fox-1758183_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-3{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/fox-1883658_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-4{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/green-4183977_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-5{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/lion-951778_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-6{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/parrot-3601194_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-7{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/red-fox-1310826_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-8{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/tiger-2535888_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.carta-9{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url(img/fox-1883658_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    box-shadow:  5px 3px 12px  #00000031;
+}
+.conteudo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    transform: translateY(160px);
+    transition: trasform 0.25s;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.conteudo::before{
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -27px;
+    width: 120px;
+    height: 100px;
+    transform: rotate(-195deg);
+    border-radius: 100%;
+    box-shadow: inset 51px 65px white; 
+}
+.title{
+    color: black;
+    font-size: 1.2em;
+    line-height: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+.sub-t{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.texto{
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+   
+    width: 270px;
+
+}
+.carta-1:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-2:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-3:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-4:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-5:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-6:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-7:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-8:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+.carta-9:hover .conteudo{
+    transform: translateY(0);
+    transition: 0.25s;
+}
+footer >p{
+    text-align: center;
+    padding: 25px;
+    background-color: black;
+    color: white;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
