@@ -17,7 +17,7 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-nav ul {
+#menu {
     list-style: none;
     list-style-position: inside;
     display: flex;
@@ -25,7 +25,7 @@ nav ul {
     margin-right: 25px;
     
 }
-nav li a{
+a{
     margin-left: 15px;
     text-decoration: none;
     color: white;
@@ -33,24 +33,98 @@ nav li a{
     text-align: center;
     font-variant: small-caps;
 }
-nav a:hover{
+a:hover{
     background-color: white;
     color: black;
     border-radius: 2px;
     transition: 0.5s;
 }
 
+#btn-mobile{
+    display: none;
+}
+@media (max-width: 875px) {
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-variant: small-caps;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: white;
+        gap: .5rem;
+    }
+    #burguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: white;
+        gap: .5rem;
+    }
+    #burguer::after, #burguer::before{
+        content: '';
+        display: block;
+        background: white;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #burguer{
+        border-top-color: transparent;
+
+    }
+    #nav.active #burguer::before{
+        transform: rotate(135deg);
+
+    }
+    #nav.active #burguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+
+    }
+    #menu{
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: black;
+        display: none;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+    
+}
+
+
 main{
     background-color: white;
     
 }
 #container-flex{
+    width: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 50px;;
 }
-#container-flex  .item{
+#container-flex  .item-1{
     width: 250px;
     height: 100px;
     background-color: black;
@@ -64,10 +138,101 @@ main{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     font-family: Arial, Helvetica, sans-serif;
     font-variant: small-caps;
+    flex: 1 1 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
     
 
 }
-#container-flex  .item:hover{
+#container-flex  .item-2{
+    width: 250px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    flex: 1 1 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+
+}
+#container-flex  .item-3{
+    width: 250px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    flex: 1 1 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+#container-flex  .item-4{
+    width: 250px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    flex: 1 1 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+}
+#container-flex  .item-1:hover{
+    width: 250px;
+    height: 100px;
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transform: translateY(10px);
+
+}
+#container-flex  .item-2:hover{
+    width: 250px;
+    height: 100px;
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transform: translateY(10px);
+
+}
+#container-flex  .item-3:hover{
+    width: 250px;
+    height: 100px;
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    transform: translateY(10px);
+
+}
+#container-flex  .item-4:hover{
     width: 250px;
     height: 100px;
     transition: 0.5s;
@@ -89,7 +254,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -103,7 +267,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -117,7 +280,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -131,7 +293,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -145,7 +306,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -159,7 +319,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -173,7 +332,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -187,7 +345,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -201,7 +358,6 @@ main{
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: tomato;
     margin: 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -292,7 +448,7 @@ main{
     transform: translateY(0);
     transition: 0.25s;
 }
-footer >p{
+footer > p{
     text-align: center;
     padding: 25px;
     background-color: black;
@@ -301,3 +457,72 @@ footer >p{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 1024px){
+    #container-flex{
+        width: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: auto;
+    }
+    }
+    @media (max-width: 875px){
+        #container-flex{
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin: auto;
+        }
+        }
+     @media (max-width: 875px){
+        #container-flex .item-1 .item-2 .item-3 .item-4{
+            width: 150px;
+            height: 50px;
+            
+        }
+     }   
+@media (max-width: 1024px){
+    #container-grid{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(6,auto);
+        grid-area: 
+        "carta-1 carta-2"
+        "carta-3 carta-4"
+        "carta-5 carta-6"
+        "carta-7 carta-8"
+        "carta-9";
+        margin: auto;
+   }
+   }
+   @media (max-width: 875px){
+    #container-grid{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(9,auto);
+        grid-area: 
+        "carta-1"
+        "carta-2"
+        "carta-3"
+        "carta-4"
+        "carta-5"
+        "carta-6"
+        "carta-7"
+        "carta-8"
+        "carta-9"; 
+        margin-left: -45px;
+   }
+   }
+   @media (max-width: 875px){
+    .carta-1 .carta-2 .carta-3 .carta-4 .carta-5 .carta-6 .carta-7 .carta-8 .carta-9{
+        position: relative;
+        width: 250px;
+        height: 250px;
+        margin-top: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+   }
+   
+   
