@@ -8,7 +8,8 @@ function toggleMenu(event) {
     event.currenTarget.setAttribute('area-expanded','true');
     if (active) {
         event.currenTarget.setAttribute('aria-label','Fechar menu');
-} else{
+} 
+    else{
     event.currenTarget.setAttribute('aria-label','Abrir menu');
 }
 
