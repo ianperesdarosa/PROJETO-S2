@@ -13,6 +13,5 @@ function toggleMenu(event) {
     event.currenTarget.setAttribute('aria-label','Abrir menu');
 }
 
-
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
